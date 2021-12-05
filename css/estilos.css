@@ -40,7 +40,7 @@ header {
     text-align: center;
     font-size: 250%;
     padding-bottom: 50px;
-} 
+}
 .paginas {
     display: inline;
 }
@@ -48,6 +48,9 @@ header {
     text-decoration: none;
     color: #000000;
     text-shadow: 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08;
+}
+.link:hover {
+    text-decoration: underline;
 }
 .section-p {
     text-align: left;
@@ -64,7 +67,7 @@ section h2 {
     width: 300px;
     height: 300px;
     padding: 10px 10px 10px 10px;
-    transition: all 1s;
+    transition: 1s;
 }
 .imagen-producto:hover {
     transform: scale(1.2);
@@ -138,10 +141,10 @@ h3 {
     text-align: center;
 }
 .formulario {
-        display: grid;
-        grid-template-columns: auto auto;
-        padding: 0 100px 10px 0;
-        text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 100px 10px 0;
+    text-align: center;
 }
 .enviar {
     font-size: 100%;
