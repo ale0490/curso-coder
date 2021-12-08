@@ -51,6 +51,7 @@ header {
 }
 .link:hover {
     text-decoration: underline;
+    color: #000000;
 }
 .section-p {
     text-align: left;
@@ -73,6 +74,21 @@ section h2 {
     transform: scale(1.2);
 }
 
+/* CONTACTO Y FOOTER */
+
+.row {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-right: 10px;
+}
+.col-sm-2 {
+    width: 100%;
+}
+.col-sm-10 {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
 /* FOOTER */
 
 footer {
@@ -81,11 +97,11 @@ footer {
     border-top: 25px solid #eb5008a2;
     display: flex;
     justify-content: space-around;
-    padding: 10px 50px 10px 50px;
-    font-size: 120%;
+    padding: 10px 10px 10px 10px;
 }
 h3 {
     padding: 10px 0 10px 0;
+    margin: 0;
 }
 .imagen-redes {
     width: 40px;
@@ -93,21 +109,18 @@ h3 {
 .imagen-pagos {
     width: 30px;
 }
-.newsletter {
-    font-size: 150%;
+.p {
+    margin-bottom: 0;
 }
-.news-formulario {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    padding-bottom: 5px;
-}
-.div-suscribirse {
-    display: grid;
-    grid-template-columns: auto;
-}
-.suscribirse {
+.sitio {
+    margin-top: 1rem;
     font-size: 75%;
-    justify-self: center;
+}
+.newsletter {
+    font-size: 120%;
+}
+.boton {
+    text-align: center;
 }
 
 /* INDEX */
@@ -140,24 +153,11 @@ h3 {
     padding: 0 0 30px 10px;
     text-align: center;
 }
-.formulario {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 0 100px 10px 0;
-    text-align: center;
-}
 .enviar {
-    font-size: 100%;
-    justify-self: center;
+    width: 100px;
 }
 
 /* MEDIA QUERIES */
-
-@media only screen and (max-device-width: 320px) {
-    .news-formulario {
-        display: block;
-    }
-}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
     h1 {
@@ -179,6 +179,12 @@ h3 {
     }
     .section-contact {
         font-size: 120%;
+    }
+}
+
+@media only screen and (max-device-width: 320px) {
+    .news-formulario {
+        display: block;
     }
 }
 
