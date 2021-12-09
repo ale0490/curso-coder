@@ -30,24 +30,20 @@ header {
     background-image: url(../imagenes/header.jpg);
     background-position: center;
     background-size: cover;
-    padding: 10vh;
+    padding: 5vh;
     text-align: center;
 }
 .logo {
-    width: 150px;
+    width: 120px;
 }
-.lista-nav {
-    text-align: center;
-    font-size: 250%;
+.navbar-brand {
+    font-size: 3rem ;
     padding-bottom: 50px;
-}
-.paginas {
-    display: inline;
 }
 .link {
     text-decoration: none;
     color: #000000;
-    text-shadow: 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08;
+    text-shadow: 2px 1px 2px #a3ec1a, 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08;
 }
 .link:hover {
     text-decoration: underline;
@@ -156,7 +152,6 @@ h3 {
 .enviar {
     width: 100px;
 }
-
 /* MEDIA QUERIES */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
