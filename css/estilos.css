@@ -3,6 +3,7 @@
 /* INDEX */
 /* QUIENES SOMOS */
 /* CONTACTO */
+/* ANIMACIONES */
 /* MEDIA QUERIES */
 
 
@@ -19,31 +20,38 @@ section {
 .section {
     text-align: center;
 }
-h1 {
-    font-size: 500%;
+.h1 {
     text-align: center;
-    color: #ffffff;
-    text-shadow: 0.02em 0.02em 0.02em #000000;
     background-color: #eb5008a2;
+}
+h1 {
+    font-weight:bolder;
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-shadow: 0.05em 0.05em 0.05em #000000;
+    padding: 10px 0 10px 0;
 }
 header {
     background-image: url(../imagenes/header.jpg);
     background-position: center;
     background-size: cover;
-    padding: 5vh;
+    padding: 20px;
     text-align: center;
 }
 .logo {
     width: 120px;
 }
 .navbar-brand {
-    font-size: 3rem ;
-    padding-bottom: 50px;
+    font-size: 2.5rem ;
+}
+ul {
+    padding: 0;
+    margin: 0;
 }
 .link {
     text-decoration: none;
     color: #000000;
-    text-shadow: 2px 1px 2px #a3ec1a, 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08;
+    text-shadow: 2px 1px 2px #a3ec1a, 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08, -2px -1px 5px #d0f30d;
 }
 .link:hover {
     text-decoration: underline;
@@ -69,6 +77,21 @@ section h2 {
 .imagen-producto:hover {
     transform: scale(1.2);
 }
+.productos {
+    text-decoration: none;
+}
+.izquierda {
+    animation: fade-izquierda 3s ease-in-out;
+}
+.derecha {
+    animation: fade-derecha 3s ease-in-out;
+}
+.arriba {
+    animation: fade-arriba .5s ease-in-out;
+}
+.rotacion {
+    animation: rotacion .5s ease-in;
+}
 
 /* CONTACTO Y FOOTER */
 
@@ -81,8 +104,9 @@ section h2 {
     width: 100%;
 }
 .col-sm-10 {
-    width: 100%;
+    width: 150%;
     padding-bottom: 5px;
+    margin-right: 150px;
 }
 
 /* FOOTER */
@@ -135,7 +159,7 @@ h3 {
     padding: 0 0 5px 100px;
 }
 .descripcion {
-    color: white;
+    color: #ffffff;
     text-align: justify;
     padding: 0 200px 0 50px;
     font-size: 110%;
@@ -151,6 +175,54 @@ h3 {
 }
 .enviar {
     width: 100px;
+}
+
+/* ANIMACIONES */
+
+@keyframes fade-izquierda {
+    from {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-derecha {
+    from {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-arriba {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes rotacion {
+    0% {
+        transform: perspective(2500px) rotateY(-100deg)
+    }
+    25% {
+        transform: perspective(2500px) rotateY(-75deg)
+    }
+    50% {
+        transform: perspective(2500px) rotateY(-50deg)
+    }
+    75% {
+        transform: perspective(2500px) rotateY(-25deg)
+    }
+    100% {
+        transform: perspective(2500px) rotateY(0deg)
+    }
 }
 /* MEDIA QUERIES */
 
