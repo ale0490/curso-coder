@@ -40,9 +40,13 @@ header {
 }
 .logo {
     width: 120px;
+    height: 120px;
 }
 .navbar-brand {
     font-size: 2.5rem ;
+}
+.navbar-toggler {
+    background-color: #eb5008a2;
 }
 ul {
     padding: 0;
@@ -57,16 +61,23 @@ ul {
     text-decoration: underline;
     color: #000000;
 }
+.div-productos {
+    padding: 0 150px 20px 150px;
+    display: flex;
+    justify-content: space-around;
+}
 .section-p {
-    text-align: left;
+    text-align: center;
     color: white;
+    margin-bottom: 0;
 }
 section h2 {
     color: #eb4f08;
     font-size: 250%;
     text-shadow: 0.02em 0.02em 0.02em #ffffff;
-    padding: 20px 0 20px 10px;
+    padding: 20px 10px 20px 10px;
     text-align: center;
+    margin-bottom: 0;
 }
 .imagen-producto {
     width: 300px;
@@ -115,9 +126,11 @@ footer {
     color: #ffffff;
     background-color: #44210a;
     border-top: 25px solid #eb5008a2;
+}
+.footer {
     display: flex;
     justify-content: space-around;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 0px 10px;
 }
 h3 {
     padding: 10px 0 10px 0;
@@ -129,24 +142,14 @@ h3 {
 .imagen-pagos {
     width: 30px;
 }
-.p {
-    margin-bottom: 0;
-}
 .sitio {
-    margin-top: 1rem;
-    font-size: 75%;
+    margin: 0 0 0 5px;
 }
 .newsletter {
     font-size: 120%;
 }
 .boton {
     text-align: center;
-}
-
-/* INDEX */
-
-.section-div {
-    padding-top: 10px;
 }
 
 /* QUIENES SOMOS */
@@ -230,7 +233,16 @@ h3 {
     h1 {
         font-size: 300%;
     }
-    footer {
+    .div-productos {
+        display: block;
+        padding: 0;
+    }
+    .imagen-producto {
+        width: 250px;
+        height: 250px;
+        padding: 10px 10px 10px 10px;
+    }
+    .footer {
         display: block;
     }
     .imagen-somos {
@@ -246,6 +258,9 @@ h3 {
     }
     .section-contact {
         font-size: 120%;
+    }
+    h1 {
+        font-size: 2rem;
     }
 }
 
