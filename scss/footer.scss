@@ -1,0 +1,43 @@
+footer {
+    color: #ffffff;
+    background-color: #44210a;
+    border-top: 25px solid #eb5008a2;
+    h3 {
+        padding: 10px 0 10px 0;
+        margin: 0;
+    }
+    p {
+        margin-bottom: 0;
+        padding-left: 5px;
+    }
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px 0px 10px;
+    .imagen-redes {
+        width: 50px;
+    }
+    .imagen-pagos {
+        width: 30px;
+    }
+    .newsletter {
+        font-size: 120%;
+        .row {
+            display: grid;
+            grid-template-columns: auto auto;
+            padding-right: 10px;
+            .col-sm-2 {
+                width: 100%;
+            }
+            .col-sm-10 {
+                width: 150%;
+                padding-bottom: 5px;
+                margin-right: 150px;
+            }
+            .boton {
+                text-align: center;
+            }
+        }
+    }
+}

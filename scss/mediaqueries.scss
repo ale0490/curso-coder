@@ -1,0 +1,58 @@
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    h1 {
+        font-size: 300%;
+    }
+    .div-productos {
+        display: block;
+        padding: 0;
+    }
+    .imagen-producto {
+        width: 250px;
+        height: 250px;
+        padding: 10px 10px 10px 10px;
+    }
+    .footer {
+        display: block;
+    }
+    .imagen-somos {
+        display: none;
+    }
+    .descripcion {
+        padding: 0 10px 0 10px;
+    }
+    .formulario {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 0 20px 10px 0;
+    }
+    .section-contact {
+        font-size: 120%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-device-width: 320px) {
+    .news-formulario {
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .quienes-somos {
+        display: block;
+    }
+    .imagen-somos {
+        padding: 0 0 0 0;
+    }
+    .descripcion {
+        padding: 5px 50px 5px 50px;
+    }
+    .formulario {
+        text-align: center;
+        grid-template-columns: 400px 300px;
+        padding: 0 0 10px 0;
+    }
+}

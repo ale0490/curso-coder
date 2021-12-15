@@ -1,5 +1,4 @@
 /* GENERAL */
-/* FOOTER */
 /* INDEX */
 /* QUIENES SOMOS */
 /* CONTACTO */
@@ -11,161 +10,15 @@
 
 * {
     margin: 0;
-    padding: 0%;
-    font-family:'Helvetica Neue', sans-serif;
-}
-section {
-    background-color: #140f0f;
-}
-.section {
-    text-align: center;
-}
-.h1 {
-    text-align: center;
-    background-color: #eb5008a2;
-}
-h1 {
-    font-weight:bolder;
-    font-size: 3.5rem;
-    color: #ffffff;
-    text-shadow: 0.05em 0.05em 0.05em #000000;
-    padding: 10px 0 10px 0;
-}
-header {
-    background-image: url(../imagenes/header.jpg);
-    background-position: center;
-    background-size: cover;
-    padding: 20px;
-    text-align: center;
-}
-.logo {
-    width: 120px;
-    height: 120px;
-}
-.navbar-brand {
-    font-size: 2.5rem ;
-}
-.navbar-toggler {
-    background-color: #eb5008a2;
-}
-ul {
     padding: 0;
-    margin: 0;
-}
-.link {
-    text-decoration: none;
-    color: #000000;
-    text-shadow: 2px 1px 2px #a3ec1a, 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08, -2px -1px 5px #d0f30d;
-}
-.link:hover {
-    text-decoration: underline;
-    color: #000000;
-}
-.div-productos {
-    padding: 0 150px 20px 150px;
-    display: flex;
-    justify-content: space-around;
-}
-.section-p {
-    text-align: center;
-    color: white;
-    margin-bottom: 0;
-}
-section h2 {
-    color: #eb4f08;
-    font-size: 250%;
-    text-shadow: 0.02em 0.02em 0.02em #ffffff;
-    padding: 20px 10px 20px 10px;
-    text-align: center;
-    margin-bottom: 0;
-}
-.imagen-producto {
-    width: 300px;
-    height: 300px;
-    padding: 10px 10px 10px 10px;
-    transition: 1s;
-}
-.imagen-producto:hover {
-    transform: scale(1.2);
-}
-.productos {
-    text-decoration: none;
+    font-family:'Helvetica Neue', sans-serif;
 }
 .izquierda {
     animation: fade-izquierda 3s ease-in-out;
 }
-.derecha {
-    animation: fade-derecha 3s ease-in-out;
-}
-.arriba {
-    animation: fade-arriba .5s ease-in-out;
-}
+
 .rotacion {
     animation: rotacion .5s ease-in;
-}
-
-/* CONTACTO Y FOOTER */
-
-.row {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding-right: 10px;
-}
-.col-sm-2 {
-    width: 100%;
-}
-.col-sm-10 {
-    width: 150%;
-    padding-bottom: 5px;
-    margin-right: 150px;
-}
-
-/* FOOTER */
-
-footer {
-    color: #ffffff;
-    background-color: #44210a;
-    border-top: 25px solid #eb5008a2;
-}
-.footer {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 10px 0px 10px;
-}
-h3 {
-    padding: 10px 0 10px 0;
-    margin: 0;
-}
-.imagen-redes {
-    width: 40px;
-}
-.imagen-pagos {
-    width: 30px;
-}
-.sitio {
-    margin: 0 0 0 5px;
-}
-.newsletter {
-    font-size: 120%;
-}
-.boton {
-    text-align: center;
-}
-
-/* QUIENES SOMOS */
-
-.quienes-somos {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.imagen-somos {
-    padding: 0 0 5px 100px;
-}
-.descripcion {
-    color: #ffffff;
-    text-align: justify;
-    padding: 0 200px 0 50px;
-    font-size: 110%;
 }
 
 /* CONTACTO */

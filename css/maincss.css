@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif; }
+
+header {
+  background-image: url(../imagenes/header.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  text-align: center; }
+  header ul {
+    padding: 0;
+    margin: 0;
+    font-weight: bolder; }
+
+.navbar .container-fluid .navbar-toggler {
+  background-color: #eb5008a2; }
+
+.navbar .container-fluid .navbar-collapse .navbar-brand {
+  font-size: 2.5rem; }
+
+.navbar .container-fluid .navbar-collapse .link {
+  text-decoration: none;
+  color: #000000;
+  text-shadow: 2px 1px 2px #a3ec1a, 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08, -2px -1px 5px #d0f30d; }
+  .navbar .container-fluid .navbar-collapse .link:hover {
+    text-decoration: underline; }
+
+section {
+  background-color: #140f0f; }
+  section h1 {
+    font-weight: bolder;
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-shadow: 0.05em 0.05em 0.05em #000000;
+    animation: fade-arriba .5s ease-in-out; }
+  section h2 {
+    color: #eb4f08;
+    font-size: 250%;
+    text-shadow: 0.02em 0.02em 0.02em #ffffff;
+    padding: 20px 10px 20px 10px;
+    margin-bottom: 0; }
+
+.section {
+  text-align: center; }
+  .section .h1 {
+    text-align: center;
+    background-color: #eb5008a2; }
+  .section .div-productos {
+    padding: 0 150px 20px 150px;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none; }
+    .section .div-productos .imagen-producto {
+      padding: 10px 10px 10px 10px;
+      transition: 1s; }
+      .section .div-productos .imagen-producto:hover {
+        transform: scale(1.2); }
+  .section .section-p {
+    color: white;
+    margin-bottom: 0; }
+  .section .quienes-somos {
+    display: grid;
+    grid-template-columns: auto auto; }
+    .section .quienes-somos .imagen-somos {
+      padding: 0 0 5px 100px; }
+    .section .quienes-somos .derecha {
+      animation: fade-derecha 3s ease-in-out; }
+    .section .quienes-somos .descripcion {
+      color: #ffffff;
+      text-align: justify;
+      padding: 0 200px 0 50px;
+      font-size: 110%; }
+    .section .quienes-somos .izquierda {
+      animation: fade-izquierda 3s ease-in-out; }
+  .section .section-contact {
+    color: white;
+    font-size: 150%;
+    padding: 0 0 30px 10px;
+    text-align: center;
+    animation: rotacion .5s ease-in; }
+    .section .section-contact .row {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding-right: 10px; }
+      .section .section-contact .row .col-sm-2 {
+        width: 100%; }
+      .section .section-contact .row .col-sm-10 {
+        width: 150%;
+        padding-bottom: 5px;
+        margin-right: 150px; }
+      .section .section-contact .row .enviar {
+        width: 100px; }
+
+footer {
+  color: #ffffff;
+  background-color: #44210a;
+  border-top: 25px solid #eb5008a2; }
+  footer h3 {
+    padding: 10px 0 10px 0;
+    margin: 0; }
+  footer p {
+    margin-bottom: 0;
+    padding-left: 5px; }
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 10px 0px 10px; }
+  .footer .imagen-redes {
+    width: 50px; }
+  .footer .imagen-pagos {
+    width: 30px; }
+  .footer .newsletter {
+    font-size: 120%; }
+    .footer .newsletter .row {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding-right: 10px; }
+      .footer .newsletter .row .col-sm-2 {
+        width: 100%; }
+      .footer .newsletter .row .col-sm-10 {
+        width: 150%;
+        padding-bottom: 5px;
+        margin-right: 150px; }
+      .footer .newsletter .row .boton {
+        text-align: center; }
+
+@keyframes fade-izquierda {
+  from {
+    opacity: 0;
+    transform: translateX(500px); }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-derecha {
+  from {
+    opacity: 0;
+    transform: translateX(-500px); }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-arriba {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes rotacion {
+  0% {
+    transform: perspective(2500px) rotateY(-100deg); }
+  25% {
+    transform: perspective(2500px) rotateY(-75deg); }
+  50% {
+    transform: perspective(2500px) rotateY(-50deg); }
+  75% {
+    transform: perspective(2500px) rotateY(-25deg); }
+  100% {
+    transform: perspective(2500px) rotateY(0deg); } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  h1 {
+    font-size: 300%; }
+  .div-productos {
+    display: block;
+    padding: 0; }
+  .imagen-producto {
+    width: 250px;
+    height: 250px;
+    padding: 10px 10px 10px 10px; }
+  .footer {
+    display: block; }
+  .imagen-somos {
+    display: none; }
+  .descripcion {
+    padding: 0 10px 0 10px; }
+  .formulario {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 20px 10px 0; }
+  .section-contact {
+    font-size: 120%; }
+  h1 {
+    font-size: 2rem; } }
+
+@media only screen and (max-device-width: 320px) {
+  .news-formulario {
+    display: block; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .quienes-somos {
+    display: block; }
+  .imagen-somos {
+    padding: 0 0 0 0; }
+  .descripcion {
+    padding: 5px 50px 5px 50px; }
+  .formulario {
+    text-align: center;
+    grid-template-columns: 400px 300px;
+    padding: 0 0 10px 0; } }

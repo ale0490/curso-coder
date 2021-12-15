@@ -1,0 +1,85 @@
+section {
+    background-color: #140f0f;
+    h1 {
+        font-weight:bolder;
+        font-size: 3.5rem;
+        color: #ffffff;
+        text-shadow: 0.05em 0.05em 0.05em #000000;
+        // padding: 10px 0 10px 0;
+        animation: fade-arriba .5s ease-in-out;
+    }
+    h2 {
+        color: #eb4f08;
+        font-size: 250%;
+        text-shadow: 0.02em 0.02em 0.02em #ffffff;
+        padding: 20px 10px 20px 10px;
+        // text-align: center;
+        margin-bottom: 0;
+        }
+}
+.section {
+    text-align: center;
+    .h1 {
+        text-align: center;
+        background-color: #eb5008a2;
+    }
+    .div-productos {
+        padding: 0 150px 20px 150px;
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;   
+        .imagen-producto {
+            padding: 10px 10px 10px 10px;
+            transition: 1s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .section-p {
+        color: white;
+        margin-bottom: 0;
+    }
+    .quienes-somos {
+        display: grid;
+        grid-template-columns: auto auto;
+        .imagen-somos {
+            padding: 0 0 5px 100px;
+        }
+        .derecha {
+            animation: fade-derecha 3s ease-in-out;
+        }
+        .descripcion {
+            color: #ffffff;
+            text-align: justify;
+            padding: 0 200px 0 50px;
+            font-size: 110%;
+        }
+        .izquierda {
+             animation: fade-izquierda 3s ease-in-out;
+        }
+    }
+    .section-contact {
+        color: white;
+        font-size: 150%;
+        padding: 0 0 30px 10px;
+        text-align: center;  
+        animation: rotacion .5s ease-in;
+        .row {
+            display: grid;
+            grid-template-columns: auto auto;
+            padding-right: 10px;
+            .col-sm-2 {
+                width: 100%;
+            }
+            .col-sm-10 {
+                width: 150%;
+                padding-bottom: 5px;
+                margin-right: 150px;
+            }
+            .enviar {
+                width: 100px;
+            }
+        }
+    }
+}
