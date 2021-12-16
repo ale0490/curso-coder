@@ -2,7 +2,7 @@ header {
     background-image: url(../imagenes/header.jpg);
     background-position: center;
     background-size: cover;
-    padding: 20px;
+    padding: $medida*2;
     text-align: center;
     ul {
         padding: 0;
@@ -17,7 +17,7 @@ header {
         }
         .navbar-collapse {
             .navbar-brand {
-                font-size: 2.5rem ;
+                font-size: $tamano*2.5 ;
                 }
             .link {
                 text-decoration: none;

@@ -2,34 +2,34 @@ section {
     background-color: #140f0f;
     h1 {
         font-weight:bolder;
-        font-size: 3.5rem;
-        color: #ffffff;
+        font-size: $tamano*1.5;
+        color: $color-texto;
         text-shadow: 0.05em 0.05em 0.05em #000000;
-        // padding: 10px 0 10px 0;
         animation: fade-arriba .5s ease-in-out;
     }
     h2 {
         color: #eb4f08;
-        font-size: 250%;
-        text-shadow: 0.02em 0.02em 0.02em #ffffff;
-        padding: 20px 10px 20px 10px;
-        // text-align: center;
+        font-size: $tamano*2.5;
+        text-shadow: 0.05em 0.05em 0.05em $color-texto;
+        padding-top: $medida*2;
+        padding-bottom: $medida*2;
         margin-bottom: 0;
         }
 }
 .section {
     text-align: center;
     .h1 {
-        text-align: center;
         background-color: #eb5008a2;
     }
     .div-productos {
-        padding: 0 150px 20px 150px;
+        padding-top: $medida;
+        padding-right: $medida*15;
+        padding-bottom: $medida*3;
+        padding-left: $medida*15;
         display: flex;
         justify-content: space-around;
         text-decoration: none;   
         .imagen-producto {
-            padding: 10px 10px 10px 10px;
             transition: 1s;
             &:hover {
                 transform: scale(1.2);
@@ -37,48 +37,51 @@ section {
         }
     }
     .section-p {
-        color: white;
+        color: $color-texto;
         margin-bottom: 0;
     }
     .quienes-somos {
         display: grid;
         grid-template-columns: auto auto;
         .imagen-somos {
-            padding: 0 0 5px 100px;
+            padding-bottom: $medida*0.5;
+            padding-left: $medida*10;
         }
         .derecha {
             animation: fade-derecha 3s ease-in-out;
         }
         .descripcion {
-            color: #ffffff;
+            color: $color-texto;
             text-align: justify;
-            padding: 0 200px 0 50px;
-            font-size: 110%;
+            padding-right: $medida*20; 
+            padding-left: $medida*5;
+            font-size: $tamano*1.1;
         }
         .izquierda {
              animation: fade-izquierda 3s ease-in-out;
         }
     }
     .section-contact {
-        color: white;
-        font-size: 150%;
-        padding: 0 0 30px 10px;
+        color: $color-texto;
+        font-size: $tamano*1.5;
+        padding-bottom: $medida*3;
+        padding-left: $medida;
         text-align: center;  
         animation: rotacion .5s ease-in;
         .row {
             display: grid;
             grid-template-columns: auto auto;
-            padding-right: 10px;
+            padding-right: $medida;
             .col-sm-2 {
-                width: 100%;
+                width: $tamano;
             }
             .col-sm-10 {
-                width: 150%;
-                padding-bottom: 5px;
-                margin-right: 150px;
+                width: $tamano*1.5;
+                padding-bottom: $medida*0.5;
+                margin-right: $medida*15;
             }
             .enviar {
-                width: 100px;
+                width: $medida*10;
             }
         }
     }

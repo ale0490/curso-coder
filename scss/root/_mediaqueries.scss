@@ -1,16 +1,19 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
     h1 {
-        font-size: 300%;
+        font-size: $tamano;
     }
     .div-productos {
         display: block;
         padding: 0;
     }
     .imagen-producto {
-        width: 250px;
-        height: 250px;
-        padding: 10px 10px 10px 10px;
+        width: $medida*25;
+        height: $medida*25;
+        padding-top: $medida;
+        padding-right: $medida;
+        padding-bottom: $medida;
+        padding-left: $medida;
     }
     .footer {
         display: block;
@@ -19,18 +22,20 @@
         display: none;
     }
     .descripcion {
-        padding: 0 10px 0 10px;
+        padding-right: $medida;
+        padding-left: $medida;
     }
     .formulario {
         display: grid;
         grid-template-columns: auto auto;
-        padding: 0 20px 10px 0;
+        padding-right: $medida*2;
+        padding-bottom: $medida;
     }
     .section-contact {
-        font-size: 120%;
+        font-size: $tamano*1.2;
     }
     h1 {
-        font-size: 2rem;
+        font-size: $tamano;
     }
 }
 
@@ -45,14 +50,12 @@
         display: block;
     }
     .imagen-somos {
-        padding: 0 0 0 0;
+        padding: 0;
     }
     .descripcion {
-        padding: 5px 50px 5px 50px;
-    }
-    .formulario {
-        text-align: center;
-        grid-template-columns: 400px 300px;
-        padding: 0 0 10px 0;
+        padding-top: $medida*0.5;
+        padding-right: $medida*5;
+        padding-bottom: $medida*0.5;
+        padding-left: $medida*5;
     }
 }
