@@ -14,7 +14,10 @@ section {
         padding-top: $medida*2;
         padding-bottom: $medida*2;
         margin-bottom: 0;
-        }
+    }
+    a {
+        text-decoration: none;
+    }
 }
 .section {
     text-align: center;
@@ -24,11 +27,10 @@ section {
     .div-productos {
         padding-top: $medida;
         padding-right: $medida*15;
-        padding-bottom: $medida*3;
+        padding-bottom: $medida*2;
         padding-left: $medida*15;
         display: flex;
         justify-content: space-around;
-        text-decoration: none;   
         .imagen-producto {
             transition: 1s;
             &:hover {
@@ -46,9 +48,7 @@ section {
         .imagen-somos {
             padding-bottom: $medida*0.5;
             padding-left: $medida*10;
-        }
-        .derecha {
-            animation: fade-derecha 3s ease-in-out;
+            animation: fade-derecha 2s ease-in;
         }
         .descripcion {
             color: $color-texto;
@@ -56,9 +56,7 @@ section {
             padding-right: $medida*20; 
             padding-left: $medida*5;
             font-size: $tamano*1.1;
-        }
-        .izquierda {
-             animation: fade-izquierda 3s ease-in-out;
+            animation: fade-izquierda 2s ease-in;
         }
     }
     .section-contact {

@@ -3,9 +3,9 @@
     padding: 0;
     font-family:'Helvetica Neue', sans-serif;
 }
-@import "root/variables.scss";
-@import "root/keyframes.scss";
-@import "secciones/header.scss";
-@import "secciones/section.scss";
-@import "secciones/footer.scss";
-@import "root/mediaqueries.scss";
+@import "root/_variables.scss";
+@import "root/_keyframes.scss";
+@import "secciones/_header.scss";
+@import "secciones/_section.scss";
+@import "secciones/_footer.scss";
+@import "root/_mediaqueries.scss";

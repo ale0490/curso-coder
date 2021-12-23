@@ -52,7 +52,7 @@ header {
   background-color: #eb5008a2; }
 
 .navbar .container-fluid .navbar-collapse .navbar-brand {
-  font-size: 250%; }
+  font-size: 230%; }
 
 .navbar .container-fluid .navbar-collapse .link {
   text-decoration: none;
@@ -76,6 +76,8 @@ section {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 0; }
+  section a {
+    text-decoration: none; }
 
 .section {
   text-align: center; }
@@ -84,11 +86,10 @@ section {
   .section .div-productos {
     padding-top: 10px;
     padding-right: 150px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-left: 150px;
     display: flex;
-    justify-content: space-around;
-    text-decoration: none; }
+    justify-content: space-around; }
     .section .div-productos .imagen-producto {
       transition: 1s; }
       .section .div-productos .imagen-producto:hover {
@@ -101,17 +102,15 @@ section {
     grid-template-columns: auto auto; }
     .section .quienes-somos .imagen-somos {
       padding-bottom: 5px;
-      padding-left: 100px; }
-    .section .quienes-somos .derecha {
-      animation: fade-derecha 3s ease-in-out; }
+      padding-left: 100px;
+      animation: fade-derecha 2s ease-in; }
     .section .quienes-somos .descripcion {
       color: #ffffff;
       text-align: justify;
       padding-right: 200px;
       padding-left: 50px;
-      font-size: 110%; }
-    .section .quienes-somos .izquierda {
-      animation: fade-izquierda 3s ease-in-out; }
+      font-size: 110%;
+      animation: fade-izquierda 2s ease-in; }
   .section .section-contact {
     color: #ffffff;
     font-size: 150%;
@@ -169,47 +168,43 @@ footer {
       .footer .newsletter .row .boton {
         text-align: center; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
-  h1 {
-    font-size: 100%; }
-  .div-productos {
-    display: block;
-    padding: 0; }
-  .imagen-producto {
-    width: 250px;
-    height: 250px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px; }
-  .footer {
-    display: block; }
-  .imagen-somos {
-    display: none; }
-  .descripcion {
-    padding-right: 10px;
-    padding-left: 10px; }
-  .formulario {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding-right: 20px;
-    padding-bottom: 10px; }
-  .section-contact {
-    font-size: 120%; }
-  h1 {
-    font-size: 100%; } }
-
-@media only screen and (max-device-width: 320px) {
-  .news-formulario {
-    display: block; } }
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .quienes-somos {
-    display: block; }
-  .imagen-somos {
-    padding: 0; }
-  .descripcion {
+  .section .div-productos .imagen-producto {
+    width: 200px;
+    height: 200px; }
+  .section .quienes-somos .imagen-somos {
+    padding: 0;
+    height: 400px; }
+  .section .quienes-somos .descripcion {
     padding-top: 5px;
     padding-right: 50px;
     padding-bottom: 5px;
     padding-left: 50px; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  h1 {
+    font-size: 100%; }
+  .section .div-productos {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px; }
+    .section .div-productos .imagen-producto {
+      width: 200px;
+      height: 200px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+  .section .quienes-somos .imagen-somos {
+    display: none; }
+  .section .quienes-somos .descripcion {
+    padding-right: 10px;
+    padding-left: 10px; }
+  .section .section-contact {
+    font-size: 120%; }
+  .footer {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px; } }
+
+@media only screen and (max-device-width: 320px) {
+  .footer .newsletter .row {
+    display: block; } }
