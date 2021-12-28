@@ -1,16 +1,14 @@
 section {
-    background-color: #140f0f;
+    background-color: map-get($colores , body );
     h1 {
+        @extend .h;
         font-weight:bolder;
         font-size: $tamano*1.5;
-        color: $color-texto;
-        text-shadow: 0.05em 0.05em 0.05em #000000;
         animation: fade-arriba .5s ease-in-out;
     }
     h2 {
-        color: #eb4f08;
+        @extend .h;
         font-size: $tamano*2.5;
-        text-shadow: 0.05em 0.05em 0.05em $color-texto;
         padding-top: $medida*2;
         padding-bottom: $medida*2;
         margin-bottom: 0;
@@ -39,19 +37,18 @@ section {
         }
     }
     .section-p {
-        color: $color-texto;
+        color: map-get($colores , texto );
         margin-bottom: 0;
     }
     .quienes-somos {
-        display: grid;
-        grid-template-columns: auto auto;
+        @include grid-auto;
         .imagen-somos {
             padding-bottom: $medida*0.5;
             padding-left: $medida*10;
             animation: fade-derecha 2s ease-in;
         }
         .descripcion {
-            color: $color-texto;
+            color: map-get($colores , texto );
             text-align: justify;
             padding-right: $medida*20; 
             padding-left: $medida*5;
@@ -60,23 +57,20 @@ section {
         }
     }
     .section-contact {
-        color: $color-texto;
+        color: map-get($colores , texto );
         font-size: $tamano*1.5;
         padding-bottom: $medida*3;
         padding-left: $medida;
         text-align: center;  
         animation: rotacion .5s ease-in;
         .row {
-            display: grid;
-            grid-template-columns: auto auto;
+            @include grid-auto;
             padding-right: $medida;
             .col-sm-2 {
-                width: $tamano;
+                @include col-sm-2;
             }
             .col-sm-10 {
-                width: $tamano*1.5;
-                padding-bottom: $medida*0.5;
-                margin-right: $medida*15;
+                @include col-sm-10;
             }
             .enviar {
                 width: $medida*10;

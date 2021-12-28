@@ -37,6 +37,10 @@
   100% {
     transform: perspective(2500px) rotateY(0deg); } }
 
+.h, section h1, section h2, footer h3 {
+  color: #ffffff;
+  text-shadow: 0.05em 0.05em 0.05em #000000; }
+
 header {
   background-image: url(../imagenes/header.jpg);
   background-position: center;
@@ -66,13 +70,9 @@ section {
   section h1 {
     font-weight: bolder;
     font-size: 150%;
-    color: #ffffff;
-    text-shadow: 0.05em 0.05em 0.05em #000000;
     animation: fade-arriba .5s ease-in-out; }
   section h2 {
-    color: #eb4f08;
     font-size: 250%;
-    text-shadow: 0.05em 0.05em 0.05em #ffffff;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 0; }

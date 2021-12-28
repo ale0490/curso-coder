@@ -1,8 +1,9 @@
 footer {
-    color: #ffffff;
-    background-color: #44210a;
+    color: map-get($colores , texto );
+    background-color: map-get($colores , footer );
     border-top: $medida*2.5 solid #eb5008a2;
     h3 {
+        @extend .h;
         padding-top: $medida;
         padding-bottom: $medida;
         margin: 0;
@@ -27,16 +28,13 @@ footer {
     .newsletter {
         font-size: $tamano*1.2;
         .row {
-            display: grid;
-            grid-template-columns: auto auto;
+            @include grid-auto;
             padding-right: $medida;
             .col-sm-2 {
-                width: $tamano;
+                @include col-sm-2;
             }
             .col-sm-10 {
-                width: $tamano*1.5;
-                padding-bottom: $medida*0.5;
-                margin-right: $medida*15;
+                @include col-sm-10;
             }
             .boton {
                 text-align: center;

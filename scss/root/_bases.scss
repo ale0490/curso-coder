@@ -1,0 +1,16 @@
+.h {
+    color: map-get($colores , texto );
+    text-shadow: 0.05em 0.05em 0.05em #000000;
+}
+@mixin grid-auto {
+    display: grid;
+            grid-template-columns: auto auto;
+}
+@mixin col-sm-2 {
+    width: $tamano;
+}
+@mixin col-sm-10 {
+    width: $tamano*1.5;
+    padding-bottom: $medida*0.5;
+    margin-right: $medida*15;
+}
