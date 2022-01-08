@@ -19,6 +19,7 @@ section {
 }
 .section {
     text-align: center;
+    padding-bottom: $medida*5;
     .h1 {
         background-color: #eb5008a2;
     }
@@ -30,19 +31,19 @@ section {
         display: flex;
         justify-content: space-around;
         .contenedor {     
-            width: 300px;
-            height: 300px;
+            width: $medida*30;
+            height: $medida*30;
             position: relative;
             .imagen-producto {
-                width: 300px;
-                height: 300px;
+                width: $medida*30;
+                height: $medida*30;
             }
             .imagen-descripcion {
                 margin: auto;  
-                color: #fff;
+                color: #ffffff;
                 text-align: center;
                 line-height: 300px; 
-                background: #000;
+                background: #000000;
                 transition: opacity .4s linear;
                 cursor: pointer;  
                 position: absolute;
@@ -68,6 +69,16 @@ section {
                             background-color: whitesmoke;
                         }
                     }
+                    .modal-body {
+                        .imagen-modal {
+                            width: $medida*30;
+                            height: $medida*30;
+                            margin-bottom: 1rem;
+                        }
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
         }
@@ -78,15 +89,18 @@ section {
     }
     .quienes-somos {
         @include grid-auto;
+        padding-top: $medida;
         .imagen-somos {
-            padding-bottom: $medida*0.5;
+            width: 612px;
+            height: 408px;
             padding-left: $medida*10;
             animation: fade-derecha 2s ease-in;
+            padding-bottom: $medida*3;
         }
         .descripcion {
             color: map-get($colores , texto );
-            text-align: justify;
-            padding-right: $medida*20; 
+            text-align: left;
+            padding-right: $medida*10; 
             padding-left: $medida*5;
             font-size: $tamano*1.1;
             animation: fade-izquierda 2s ease-in;
@@ -102,6 +116,7 @@ section {
         .row {
             @include grid-auto;
             padding-right: $medida;
+            margin-right: 0;
             .col-sm-2 {
                 @include col-sm-2;
             }

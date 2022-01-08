@@ -4,7 +4,7 @@
 }
 @mixin grid-auto {
     display: grid;
-            grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
 }
 @mixin col-sm-2 {
     width: $tamano;

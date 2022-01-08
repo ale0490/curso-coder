@@ -5,7 +5,6 @@ footer {
     h3 {
         @extend .h;
         padding-top: $medida;
-        padding-bottom: $medida;
         margin: 0;
     }
     .sitio {
@@ -19,11 +18,14 @@ footer {
     padding-top: $medida;
     padding-right: $medida;
     padding-left: $medida;
-    .imagen-redes {
-        width: $medida*5;
-    }
-    .imagen-pagos {
-        width: $medida*3;
+    .redes {
+        padding-bottom: $medida*2;   
+        .imagen-redes {
+            width: $medida*5;
+        }
+        .imagen-pagos {
+            width: $medida*3;
+        }
     }
     .newsletter {
         font-size: $tamano*1.2;
