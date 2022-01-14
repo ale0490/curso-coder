@@ -1,17 +1,16 @@
 section {
-    background-color: map-get($colores , body );
+    background-image: url(../imagenes/section.jpg);
     h1 {
-        @extend .h;
-        font-weight:bolder;
-        font-size: $tamano*1.5;
-        animation: fade-arriba .5s ease-in-out;
+        @extend h;
+        animation: fade-arriba .7s ease-in-out;
+        margin: 0;
     }
     h2 {
-        @extend .h;
-        font-size: $tamano*2.5;
-        padding-top: $medida*2;
+        @extend h;
+        padding-top: $medida*5;
         padding-bottom: $medida*2;
-        margin-bottom: 0;
+        margin: 0;
+        text-decoration: underline;
     }
     a {
         text-decoration: none;
@@ -20,14 +19,13 @@ section {
 .section {
     text-align: center;
     padding-bottom: $medida*5;
-    .h1 {
-        background-color: #eb5008a2;
+    .logo {
+        height: 150px;
+        width: 150px;
     }
     .div-productos {
         padding-top: $medida;
-        padding-right: $medida*15;
         padding-bottom: $medida*2;
-        padding-left: $medida*15;
         display: flex;
         justify-content: space-around;
         .contenedor {     
@@ -39,44 +37,46 @@ section {
                 height: $medida*30;
             }
             .imagen-descripcion {
+                color: map-get($colores , texto2 );
+                background-color: map-get($colores, header );
                 margin: auto;  
-                color: #ffffff;
                 text-align: center;
-                line-height: 300px; 
-                background: #000000;
+                line-height: 100px; 
                 transition: opacity .4s linear;
                 cursor: pointer;  
                 position: absolute;
-                top: 0;
+                top: 200px;
                 right: 0;
                 bottom: 0;
                 left: 0;
                 opacity: 0;
+                font-size: 25px;
                 }
             &:hover {
                 .imagen-descripcion {
-                    opacity: .75;
+                    opacity: 0.9;
+                    width: 300px;
+                    height: 100px;
+                    bottom: 0;
                 }
             }
         }
         .modal {
             .modal-dialog {
                 .modal-content {
-                    color: map-get($colores , texto );
-                    background-color: map-get($colores , body );
+                    color: map-get($colores , texto2 );
+                    background-color: map-get($colores , header );
                     .modal-header {
                         .btn-close {
-                            background-color: whitesmoke;
+                            background-color: map-get($colores , texto2 );
                         }
                     }
                     .modal-body {
+                        font-size: $texto-footer;
                         .imagen-modal {
                             width: $medida*30;
                             height: $medida*30;
                             margin-bottom: 1rem;
-                        }
-                        p {
-                            margin-bottom: 0;
                         }
                     }
                 }
@@ -86,6 +86,8 @@ section {
     .section-p {
         color: map-get($colores , texto );
         margin-bottom: 0;
+        font-size: 18px;
+        padding-top: 30px;
     }
     .quienes-somos {
         @include grid-auto;
@@ -102,13 +104,13 @@ section {
             text-align: left;
             padding-right: $medida*10; 
             padding-left: $medida*5;
-            font-size: $tamano*1.1;
+            font-size: $texto;
             animation: fade-izquierda 2s ease-in;
         }
     }
     .section-contact {
         color: map-get($colores , texto );
-        font-size: $tamano*1.5;
+        font-size: 20px;
         padding-bottom: $medida*3;
         padding-left: $medida;
         text-align: center;  

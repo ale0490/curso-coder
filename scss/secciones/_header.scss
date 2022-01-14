@@ -1,30 +1,38 @@
 header {
-    background-image: url(../imagenes/header.jpg);
-    background-position: center;
-    background-size: cover;
-    padding: $medida*5;
-    text-align: center;
+    background-color: map-get($colores , header );
+    height: 91.2px;
     ul {
         padding: 0;
         margin: 0;
-        font-weight:bolder;
+        a {
+            text-decoration: none;
+            color: map-get($colores , principal );
+            text-shadow: 1px 1px 1px map-get($colores , shadow );
+            &:hover {
+                text-decoration: underline;
+                color: map-get($colores , principal );
+            }
+        }
     }
 }
-.navbar {
-    .container-fluid {
-        .navbar-toggler {
-            background-color: #eb5008a2;
-        }
-        .navbar-collapse {
-            .navbar-brand {
-                font-size: $tamano*2.3;
-                }
-            .link {
-                text-decoration: none;
-                color: #000000;
-                text-shadow: 2px 1px 2px #a3ec1a, 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08, -2px -1px 5px #d0f30d;
-                &:hover {
-                    text-decoration: underline;
+.contenedor-nav {
+    background-color: map-get($colores , header );
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    opacity: 0.9;
+    top: 0;
+    padding-top: $medida;
+    padding-bottom: $medida;
+    .navbar {
+        text-align: center;
+        .container-fluid {
+            .navbar-toggler {
+                background-color: map-get($colores , principal );
+            }
+            .navbar-collapse {
+                .navbar-brand {
+                    font-size: 38px;
                 }
             }
         }

@@ -1,9 +1,24 @@
-$tamano: 100%;
 $medida: 10px;
+$texto: 20px;
+$texto-footer: 18px;
 
 $colores: (
-    body: #140f0f,
-    footer: #44210a,
-    texto: #ffffff,
-    texto-2: #000000,
+    header: rgb(48, 39, 30),
+    principal: rgb(247, 228, 203),
+    secundario: rgb(132, 85, 43),
+    texto: rgb(0, 0, 0),
+    texto2: rgb(255, 255, 255),
+    shadow: rgb(0, 0, 0),
 );
+$h: (
+    1:70px,
+    2:50px,
+    3:25px,
+    4:25px
+);
+
+@each $numero, $px in $h {
+    h#{$numero} {
+        font-size: $px;
+    }
+}

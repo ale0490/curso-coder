@@ -1,7 +1,26 @@
+h1 {
+  font-size: 70px; }
+
+h2 {
+  font-size: 50px; }
+
+h3 {
+  font-size: 25px; }
+
+h4 {
+  font-size: 25px; }
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', sans-serif; }
+  font-family: 'Roboto Slab', serif,'Helvetica Neue', sans-serif; }
+
+h, section h1, section h2, footer h3 {
+  color: #84552b;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  font-weight: bolder;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 @keyframes fade-izquierda {
   from {
@@ -37,58 +56,58 @@
   100% {
     transform: perspective(2500px) rotateY(0deg); } }
 
-.h, section h1, section h2, footer h3 {
-  color: #ffffff;
-  text-shadow: 0.05em 0.05em 0.05em #000000; }
-
 header {
-  background-image: url(../imagenes/header.jpg);
-  background-position: center;
-  background-size: cover;
-  padding: 50px;
-  text-align: center; }
+  background-color: #30271e;
+  height: 91.2px; }
   header ul {
     padding: 0;
-    margin: 0;
-    font-weight: bolder; }
+    margin: 0; }
+    header ul a {
+      text-decoration: none;
+      color: #f7e4cb;
+      text-shadow: 1px 1px 1px black; }
+      header ul a:hover {
+        text-decoration: underline;
+        color: #f7e4cb; }
 
-.navbar .container-fluid .navbar-toggler {
-  background-color: #eb5008a2; }
-
-.navbar .container-fluid .navbar-collapse .navbar-brand {
-  font-size: 230%; }
-
-.navbar .container-fluid .navbar-collapse .link {
-  text-decoration: none;
-  color: #000000;
-  text-shadow: 2px 1px 2px #a3ec1a, 3px 2px 3px #d0f30d, 5px 4px 5px #2eeb08, -2px -1px 5px #d0f30d; }
-  .navbar .container-fluid .navbar-collapse .link:hover {
-    text-decoration: underline; }
+.contenedor-nav {
+  background-color: #30271e;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  opacity: 0.9;
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .contenedor-nav .navbar {
+    text-align: center; }
+    .contenedor-nav .navbar .container-fluid .navbar-toggler {
+      background-color: #f7e4cb; }
+    .contenedor-nav .navbar .container-fluid .navbar-collapse .navbar-brand {
+      font-size: 38px; }
 
 section {
-  background-color: #140f0f; }
+  background-image: url(../imagenes/section.jpg); }
   section h1 {
-    font-weight: bolder;
-    font-size: 150%;
-    animation: fade-arriba .5s ease-in-out; }
+    animation: fade-arriba .7s ease-in-out;
+    margin: 0; }
   section h2 {
-    font-size: 250%;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
-    margin-bottom: 0; }
+    margin: 0;
+    text-decoration: underline; }
   section a {
     text-decoration: none; }
 
 .section {
   text-align: center;
   padding-bottom: 50px; }
-  .section .h1 {
-    background-color: #eb5008a2; }
+  .section .logo {
+    height: 150px;
+    width: 150px; }
   .section .div-productos {
     padding-top: 10px;
-    padding-right: 150px;
     padding-bottom: 20px;
-    padding-left: 150px;
     display: flex;
     justify-content: space-around; }
     .section .div-productos .contenedor {
@@ -99,35 +118,41 @@ section {
         width: 300px;
         height: 300px; }
       .section .div-productos .contenedor .imagen-descripcion {
+        color: white;
+        background-color: #30271e;
         margin: auto;
-        color: #ffffff;
         text-align: center;
-        line-height: 300px;
-        background: #000000;
+        line-height: 100px;
         transition: opacity .4s linear;
         cursor: pointer;
         position: absolute;
-        top: 0;
+        top: 200px;
         right: 0;
         bottom: 0;
         left: 0;
-        opacity: 0; }
+        opacity: 0;
+        font-size: 25px; }
       .section .div-productos .contenedor:hover .imagen-descripcion {
-        opacity: .75; }
-    .section .div-productos .modal .modal-dialog .modal-content {
-      color: #ffffff;
-      background-color: #140f0f; }
-      .section .div-productos .modal .modal-dialog .modal-content .modal-header .btn-close {
-        background-color: whitesmoke; }
-      .section .div-productos .modal .modal-dialog .modal-content .modal-body .imagen-modal {
+        opacity: 0.9;
         width: 300px;
-        height: 300px;
-        margin-bottom: 1rem; }
-      .section .div-productos .modal .modal-dialog .modal-content .modal-body p {
-        margin-bottom: 0; }
+        height: 100px;
+        bottom: 0; }
+    .section .div-productos .modal .modal-dialog .modal-content {
+      color: white;
+      background-color: #30271e; }
+      .section .div-productos .modal .modal-dialog .modal-content .modal-header .btn-close {
+        background-color: white; }
+      .section .div-productos .modal .modal-dialog .modal-content .modal-body {
+        font-size: 18px; }
+        .section .div-productos .modal .modal-dialog .modal-content .modal-body .imagen-modal {
+          width: 300px;
+          height: 300px;
+          margin-bottom: 1rem; }
   .section .section-p {
-    color: #ffffff;
-    margin-bottom: 0; }
+    color: black;
+    margin-bottom: 0;
+    font-size: 18px;
+    padding-top: 30px; }
   .section .quienes-somos {
     display: grid;
     grid-template-columns: auto auto;
@@ -139,15 +164,15 @@ section {
       animation: fade-derecha 2s ease-in;
       padding-bottom: 30px; }
     .section .quienes-somos .descripcion {
-      color: #ffffff;
+      color: black;
       text-align: left;
       padding-right: 100px;
       padding-left: 50px;
-      font-size: 110%;
+      font-size: 20px;
       animation: fade-izquierda 2s ease-in; }
   .section .section-contact {
-    color: #ffffff;
-    font-size: 150%;
+    color: black;
+    font-size: 20px;
     padding-bottom: 30px;
     padding-left: 10px;
     text-align: center;
@@ -160,22 +185,34 @@ section {
       .section .section-contact .row .col-sm-2 {
         width: 100%; }
       .section .section-contact .row .col-sm-10 {
-        width: 150%;
+        width: 100%;
         padding-bottom: 5px;
-        margin-right: 150px; }
+        margin-right: 150px;
+        font-size: 20px; }
       .section .section-contact .row .enviar {
         width: 100px; }
 
 footer {
-  color: #ffffff;
-  background-color: #44210a;
-  border-top: 25px solid #eb5008a2; }
+  color: black;
+  background-image: url(../imagenes/footer.jpg);
+  background-size: cover;
+  background-position: center; }
   footer h3 {
     padding-top: 10px;
-    margin: 0; }
+    margin: 0;
+    color: #f7e4cb; }
   footer .sitio {
-    margin-bottom: 0;
-    padding-left: 5px; }
+    padding-left: 5px;
+    padding-right: 5px;
+    border-top: 1px solid white;
+    background-color: #30271e;
+    text-align: center;
+    font-size: 13px; }
+    footer .sitio .copy {
+      margin-bottom: 0;
+      color: white;
+      padding-top: 5px;
+      padding-bottom: 5px; }
 
 .footer {
   display: flex;
@@ -190,7 +227,8 @@ footer {
     .footer .redes .imagen-pagos {
       width: 30px; }
   .footer .newsletter {
-    font-size: 120%; }
+    font-size: 18px;
+    color: white; }
     .footer .newsletter .row {
       display: grid;
       grid-template-columns: auto auto;
@@ -198,28 +236,21 @@ footer {
       .footer .newsletter .row .col-sm-2 {
         width: 100%; }
       .footer .newsletter .row .col-sm-10 {
-        width: 150%;
+        width: 100%;
         padding-bottom: 5px;
-        margin-right: 150px; }
+        margin-right: 150px;
+        font-size: 20px; }
       .footer .newsletter .row .boton {
         text-align: center; }
 
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1270px) {
-  .section .div-productos {
-    padding-right: 20px;
-    padding-left: 20px; }
-    .section .div-productos .contenedor {
-      width: 200px;
-      height: 200px; }
-      .section .div-productos .contenedor .imagen-producto {
-        width: 200px;
-        height: 200px; } }
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .navbar .container-fluid .navbar-collapse .navbar-brand {
-    font-size: 200%; }
   section h1 {
-    font-size: 130%; }
+    font-size: 50px; }
+  section h2 {
+    font-size: 40px; }
+  .section .logo {
+    height: 120px;
+    width: 120px; }
   .section .div-productos {
     padding-right: 20px;
     padding-left: 20px; }
@@ -238,15 +269,22 @@ footer {
       padding-top: 5px;
       padding-right: 50px;
       padding-bottom: 5px;
-      padding-left: 50px; } }
+      padding-left: 50px; }
+  footer h3 {
+    font-size: 20px; } }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-  .navbar .container-fluid .navbar-collapse .navbar-brand {
-    font-size: 150%; }
+  .contenedor-nav .navbar .container-fluid .navbar-collapse .navbar-brand {
+    font-size: 30px; }
   section h1 {
-    font-size: 100%; }
+    font-size: 35px; }
+  section h2 {
+    font-size: 30px; }
   .section {
     align-items: center; }
+    .section .logo {
+      height: 100px;
+      width: 100px; }
     .section .div-productos {
       flex-direction: column;
       padding-left: calc((100vw - 200px )/ 2);
@@ -266,13 +304,15 @@ footer {
       .section .quienes-somos .imagen-somos {
         display: none; }
     .section .section-contact {
-      font-size: 130%; }
+      font-size: 20px; }
   .footer {
     display: block;
     padding-right: 20px;
     padding-left: 20px; }
     .footer .newsletter .row .col-sm-10 {
-      margin-right: 0; } }
+      margin-right: 0; }
+  footer h3 {
+    font-size: 20px; } }
 
 @media only screen and (max-device-width: 375px) {
   .section .div-productos .modal .modal-dialog .modal-content .modal-body .imagen-modal {

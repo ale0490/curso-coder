@@ -1,15 +1,27 @@
 footer {
     color: map-get($colores , texto );
-    background-color: map-get($colores , footer );
-    border-top: $medida*2.5 solid #eb5008a2;
+    background-image: url(../imagenes/footer.jpg);
+    background-size: cover;
+    background-position: center;
     h3 {
-        @extend .h;
+        @extend h;
         padding-top: $medida;
         margin: 0;
+        color: map-get($colores , principal )
     }
     .sitio {
-        margin-bottom: 0;
         padding-left: $medida*0.5;
+        padding-right: $medida*0.5;
+        border-top: 1px solid map-get($colores , texto2 );
+        background-color: rgb(48, 39, 30);
+        text-align: center;
+        font-size: 13px;
+        .copy {
+            margin-bottom: 0;
+            color: map-get($colores, texto2 );
+            padding-top: $medida / 2 ;
+            padding-bottom: $medida / 2;
+        }
     }
 }
 .footer {
@@ -28,7 +40,8 @@ footer {
         }
     }
     .newsletter {
-        font-size: $tamano*1.2;
+        font-size: $texto-footer;
+        color: map-get($colores , texto2 );
         .row {
             @include grid-auto;
             padding-right: $medida;

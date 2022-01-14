@@ -1,16 +1,25 @@
-.h {
-    color: map-get($colores , texto );
-    text-shadow: 0.05em 0.05em 0.05em #000000;
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto Slab', serif,'Helvetica Neue', sans-serif;
+}
+h {
+    color: map-get($colores , secundario );
+    text-shadow: 0.5px 0.5px 0.5px map-get($colores , shadow );
+    font-weight: bolder;
+    padding-top: $medida;
+    padding-bottom: $medida;
 }
 @mixin grid-auto {
     display: grid;
     grid-template-columns: auto auto;
 }
 @mixin col-sm-2 {
-    width: $tamano;
+    width: 100%;
 }
 @mixin col-sm-10 {
-    width: $tamano*1.5;
+    width: 100%;
     padding-bottom: $medida*0.5;
     margin-right: $medida*15;
+    font-size: $texto;
 }
