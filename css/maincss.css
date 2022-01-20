@@ -8,14 +8,14 @@ h3 {
   font-size: 25px; }
 
 h4 {
-  font-size: 25px; }
+  font-size: 20px; }
 
 * {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Slab', serif,'Helvetica Neue', sans-serif; }
 
-h, section h1, section h2, footer h3 {
+h, section h1, section h2, footer h4 {
   color: #84552b;
   text-shadow: 0.5px 0.5px 0.5px black;
   font-weight: bolder;
@@ -87,7 +87,7 @@ header {
       font-size: 38px; }
 
 section {
-  background-image: url(../imagenes/section.jpg); }
+  background-image: url(../imagenes/section.webp); }
   section h1 {
     animation: fade-arriba .7s ease-in-out;
     margin: 0; }
@@ -98,10 +98,12 @@ section {
     text-decoration: underline; }
   section a {
     text-decoration: none; }
+  section p {
+    margin: 0;
+    padding-bottom: 1rem; }
 
 .section {
-  text-align: center;
-  padding-bottom: 50px; }
+  text-align: center; }
   .section .logo {
     height: 150px;
     width: 150px; }
@@ -152,7 +154,8 @@ section {
     color: black;
     margin-bottom: 0;
     font-size: 18px;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-bottom: 50px; }
   .section .quienes-somos {
     display: grid;
     grid-template-columns: auto auto;
@@ -193,14 +196,22 @@ section {
         width: 100px; }
 
 footer {
-  color: black;
-  background-image: url(../imagenes/footer.jpg);
+  background-image: url(../imagenes/footer.webp);
   background-size: cover;
   background-position: center; }
-  footer h3 {
+  footer h4 {
     padding-top: 10px;
     margin: 0;
     color: #f7e4cb; }
+  footer ul {
+    padding: 0;
+    margin: 0; }
+    footer ul .link {
+      text-decoration: none;
+      color: white;
+      font-size: 18px; }
+      footer ul .link:hover {
+        text-decoration: underline; }
   footer .sitio {
     padding-left: 5px;
     padding-right: 5px;
@@ -215,33 +226,53 @@ footer {
       padding-bottom: 5px; }
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 10px;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-areas: "navegacion pago news";
+  grid-template-columns: min-content auto auto; }
   .footer .redes {
-    padding-bottom: 20px; }
+    padding-top: 20px; }
     .footer .redes .imagen-redes {
-      width: 50px; }
+      width: 40px; }
     .footer .redes .imagen-pagos {
-      width: 30px; }
-  .footer .newsletter {
-    font-size: 18px;
-    color: white; }
-    .footer .newsletter .row {
-      display: grid;
-      grid-template-columns: auto auto;
-      padding-right: 10px; }
-      .footer .newsletter .row .col-sm-2 {
-        width: 100%; }
-      .footer .newsletter .row .col-sm-10 {
-        width: 100%;
-        padding-bottom: 5px;
-        margin-right: 150px;
-        font-size: 20px; }
-      .footer .newsletter .row .boton {
-        text-align: center; }
+      width: 45px;
+      margin: 3px; }
+  .footer .navegacion {
+    grid-area: navegacion; }
+  .footer .pago {
+    grid-area: pago; }
+  .footer .news {
+    grid-area: news; }
+    .footer .news .box-newsletter {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .footer .news .box-newsletter .newsletter {
+        font-size: 18px;
+        text-align: left; }
+        .footer .news .box-newsletter .newsletter .row {
+          padding-right: 10px; }
+          .footer .news .box-newsletter .newsletter .row .col-sm-2 {
+            width: 100%; }
+          .footer .news .box-newsletter .newsletter .row .col-sm-10 {
+            width: 100%;
+            padding-bottom: 5px;
+            margin-right: 150px;
+            font-size: 20px;
+            width: auto;
+            margin-right: 0;
+            display: grid;
+            grid-template-columns: auto min-content; }
+            .footer .news .box-newsletter .newsletter .row .col-sm-10 .input {
+              padding-right: 10px; }
+              .footer .news .box-newsletter .newsletter .row .col-sm-10 .input .form-control {
+                border-radius: 0;
+                padding: 3px 5px;
+                font-size: 18px; }
+            .footer .news .box-newsletter .newsletter .row .col-sm-10 .suscribirse {
+              background-color: #84552b;
+              color: white; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   section h1 {
@@ -273,7 +304,7 @@ footer {
   footer h3 {
     font-size: 20px; } }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .contenedor-nav .navbar .container-fluid .navbar-collapse .navbar-brand {
     font-size: 30px; }
   section h1 {
@@ -286,8 +317,6 @@ footer {
       height: 100px;
       width: 100px; }
     .section .div-productos {
-      flex-direction: column;
-      padding-left: calc((100vw - 200px )/ 2);
       padding-right: 0; }
       .section .div-productos .contenedor {
         width: 200px;
@@ -306,13 +335,25 @@ footer {
     .section .section-contact {
       font-size: 20px; }
   .footer {
-    display: block;
-    padding-right: 20px;
-    padding-left: 20px; }
-    .footer .newsletter .row .col-sm-10 {
-      margin-right: 0; }
+    display: grid;
+    grid-template-areas: "navegacion pago" "news news";
+    grid-template-columns: min-content auto; }
+    .footer .news .box-newsletter .newsletter .row .col-sm-10 .suscribirse {
+      background-color: #30271e; }
   footer h3 {
     font-size: 20px; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  .footer {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px; } }
+
+@media only screen and (max-device-width: 679px) {
+  .section .div-productos {
+    flex-direction: column;
+    padding-left: calc((100vw - 200px )/ 2);
+    padding-right: 0; } }
 
 @media only screen and (max-device-width: 375px) {
   .section .div-productos .modal .modal-dialog .modal-content .modal-body .imagen-modal {

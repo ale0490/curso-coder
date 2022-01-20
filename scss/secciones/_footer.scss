@@ -1,13 +1,24 @@
 footer {
-    color: map-get($colores , texto );
-    background-image: url(../imagenes/footer.jpg);
+    background-image: url(../imagenes/footer.webp);
     background-size: cover;
     background-position: center;
-    h3 {
+    h4 {
         @extend h;
         padding-top: $medida;
         margin: 0;
-        color: map-get($colores , principal )
+        color: map-get($colores , principal );
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        .link {
+            text-decoration: none;
+            color: map-get($colores , texto2 );
+            font-size: $texto-footer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .sitio {
         padding-left: $medida*0.5;
@@ -25,34 +36,61 @@ footer {
     }
 }
 .footer {
-    display: flex;
-    justify-content: space-around;
-    padding-top: $medida;
     padding-right: $medida;
     padding-left: $medida;
+    display: grid;
+    justify-content: space-around;
+    grid-template-areas: "navegacion pago news";
+    grid-template-columns: min-content auto auto;   
     .redes {
-        padding-bottom: $medida*2;   
+        padding-top: $medida*2;
         .imagen-redes {
-            width: $medida*5;
+            width: $medida*4;
         }
         .imagen-pagos {
-            width: $medida*3;
+            width: $medida*4.5;
+            margin: 3px;
         }
     }
-    .newsletter {
-        font-size: $texto-footer;
-        color: map-get($colores , texto2 );
-        .row {
-            @include grid-auto;
-            padding-right: $medida;
-            .col-sm-2 {
-                @include col-sm-2;
-            }
-            .col-sm-10 {
-                @include col-sm-10;
-            }
-            .boton {
-                text-align: center;
+    .navegacion {
+        grid-area: navegacion;
+    }
+    .pago {
+        grid-area: pago;
+    }
+    .news {
+        grid-area: news;
+        .box-newsletter {
+            padding-top: $medida*2;
+            padding-bottom: $medida*2;
+            .newsletter {
+                font-size: $texto-footer;
+                text-align: left;
+                .row {
+                    padding-right: $medida;
+                    .col-sm-2 {
+                        @include col-sm-2;
+                    }
+                    .col-sm-10 {
+                        @include col-sm-10;
+                        width: auto;
+                        margin-right: 0;
+                        display: grid;
+                        grid-template-columns: auto min-content;
+                        .input {
+                            padding-right: $medida;
+                            .form-control {
+                                border-radius: 0;
+                                padding: 3px 5px;
+                                font-size: $texto-footer;
+                            }
+                        }
+                        .suscribirse {
+                            background-color: map-get($colores , secundario );
+                            color: map-get($colores , texto2 );
+                        }
+                    }
+                }
             }
         }
     }

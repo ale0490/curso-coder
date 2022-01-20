@@ -1,5 +1,5 @@
 section {
-    background-image: url(../imagenes/section.jpg);
+    background-image: url(../imagenes/section.webp);
     h1 {
         @extend h;
         animation: fade-arriba .7s ease-in-out;
@@ -15,10 +15,13 @@ section {
     a {
         text-decoration: none;
     }
+    p {
+        margin: 0;
+        padding-bottom: 1rem;
+    }
 }
 .section {
     text-align: center;
-    padding-bottom: $medida*5;
     .logo {
         height: 150px;
         width: 150px;
@@ -88,6 +91,7 @@ section {
         margin-bottom: 0;
         font-size: 18px;
         padding-top: 30px;
+        padding-bottom: $medida*5;
     }
     .quienes-somos {
         @include grid-auto;
