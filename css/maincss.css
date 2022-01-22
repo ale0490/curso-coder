@@ -87,7 +87,8 @@ header {
       font-size: 38px; }
 
 section {
-  background-image: url(../imagenes/section.webp); }
+  background-image: url(../imagenes/section.webp);
+  padding-bottom: 50px; }
   section h1 {
     animation: fade-arriba .7s ease-in-out;
     margin: 0; }
@@ -154,8 +155,7 @@ section {
     color: black;
     margin-bottom: 0;
     font-size: 18px;
-    padding-top: 30px;
-    padding-bottom: 50px; }
+    padding-top: 30px; }
   .section .quienes-somos {
     display: grid;
     grid-template-columns: auto auto;
@@ -172,7 +172,8 @@ section {
       padding-right: 100px;
       padding-left: 50px;
       font-size: 20px;
-      animation: fade-izquierda 2s ease-in; }
+      animation: fade-izquierda 2s ease-in;
+      background-color: rgba(245, 245, 245, 0.644); }
   .section .section-contact {
     color: black;
     font-size: 20px;
@@ -198,7 +199,8 @@ section {
 footer {
   background-image: url(../imagenes/footer.webp);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  background-color: #30271e; }
   footer h4 {
     padding-top: 10px;
     margin: 0;

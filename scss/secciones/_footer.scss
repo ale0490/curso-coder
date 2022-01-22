@@ -2,6 +2,7 @@ footer {
     background-image: url(../imagenes/footer.webp);
     background-size: cover;
     background-position: center;
+    background-color: map-get($colores , header );
     h4 {
         @extend h;
         padding-top: $medida;
