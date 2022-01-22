@@ -1,6 +1,6 @@
 section {
     background-image: url(../imagenes/section.webp);
-    padding-bottom: 50px;
+    padding-bottom: $medida*5;
     h1 {
         @extend h;
         animation: fade-arriba .7s ease-in-out;
