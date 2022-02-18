@@ -31,7 +31,7 @@ function calcularTotal(total){
 }
 
 function agregar(){
-    let opcion = prompt ("¿Desea agregar algo mas? \n1 - Si \n2 - No")
+    let opcion = prompt ("¿Desea agregar algo mas? \n1 - Si \n2 - No");
     switch(opcion){
         case "1":
             menu();
