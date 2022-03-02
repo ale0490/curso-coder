@@ -1,56 +1,77 @@
-let tamaño1 = "Grande";
-let tamaño2 = "Chica";
-let peso1 = "2kg";
-let peso2 = "1kg";
-let precioGrande = 2000;
-let precioChica = 1200;
+let tamañoG = "Grande";
+let tamañoC = "Chica";
+let pesoGrande = "2kg";
+let pesoChica = "1kg";
 let descuento = 0.9;
 let cantidad;
 let precioTotal = 0;
+let contador = 0;
+let listaProductosMenu = "Estos son nuestros productos. ¿Que desea comprar?";
 
 class Producto {
-    constructor (nombreValor, precioGrande, precioChica){
-        this.Nombre = nombreValor;
+    constructor (nombre, precioGrande, precioChica){
+        this.Nombre = nombre;
         this.Grande = precioGrande;
         this.Chica = precioChica;
     }
 }
 
-const producto1 = new Producto("Torta Matilda", 2000, 1200)
-const producto2 = new Producto("Torta Oreo", 2000, 1200)
-const producto3 = new Producto("Torta Flan", 2000, 1200)
-const producto4 = new Producto("Torta Frutillas", 2000, 1200)
-const producto5 = new Producto("Torta Marquise", 2000, 1200)
-const producto6 = new Producto("Torta Selva Negra", 2000, 1200)
+const producto1 = new Producto("Torta Matilda",     2500, 1500);
+const producto2 = new Producto("Torta Oreo",        2000, 1200);
+const producto3 = new Producto("Torta Flan",        2250, 1350);
+const producto4 = new Producto("Torta Frutillas",   2050, 1300);
+const producto5 = new Producto("Torta Marquise",    2300, 1300);
+const producto6 = new Producto("Torta Selva Negra", 2400, 1250);
 
 const pasteleria = [producto1, producto2, producto3, producto4, producto5, producto6];
 
+for (const tortas of pasteleria){
+    contador++
+    listaProductosMenu += "\n" + contador + "- " + tortas.Nombre 
+}
+
 function listaProductos() {
-    let opcion = prompt ("Estos son nuestros productos. \n ¿Que desea comprar? \n1 - " + pasteleria[0].nombre + "\n2 - " + pasteleria[1].nombre + "\n3 - " + pasteleria[2].nombre + "\n4 - " + pasteleria[3].nombre + "\n5 - " + pasteleria[4].nombre + "\n6 - Salir");
+    let opcion = prompt (listaProductosMenu + "\n7 - Continuar sin agregar \n8 - Salir");
     switch (opcion){
         case "1":
-            tamaño();
+            tamaño(pasteleria[0].Grande, pasteleria[0].Chica);
             break;
         case "2":
-            tamaño();
+            tamaño(pasteleria[1].Grande, pasteleria[1].Chica);
             break;
         case "3":
-            tamaño();
+            tamaño(pasteleria[2].Grande, pasteleria[2].Chica);
             break;
         case "4":
-            tamaño();
+            tamaño(pasteleria[3].Grande, pasteleria[3].Chica);
             break;
         case "5":
-            tamaño();
+            tamaño(pasteleria[4].Grande, pasteleria[4].Chica);
             break;
-        case "6":
+        case "5":
+            tamaño(pasteleria[5].Grande, pasteleria[5].Chica);
+            break;
+        case "7":
+            calcularTotal();
+            break;
+        case "8":
             break;
         default:
             alert("Opcion Incorrecta");
             listaProductos();
             break;
     }
-} 
+}
+
+function buscar() {
+	let buscarTorta = prompt("Ingrese la torta que desea buscar ");
+	const buscado = pasteleria.filter((torta) => {
+        return torta.Nombre.toString().toLowerCase().includes(buscarTorta.toLowerCase());
+	});
+	buscado.forEach((item) => {
+		alert(item.Nombre + "\n Grande " + item.Grande + "\n Chica " + item.Chica);
+	});
+}
 
 function confirmar(precio){
     cantidad = parseInt(prompt("Ingrese la cantidad que desea comprar:"));
@@ -69,7 +90,7 @@ function calcularSubTotal(cantidad, precio, des){
     console.log("el subtotal es $ " + subtotal)
 }
 
-function calcularTotal(total){
+function calcularTotal(){
     alert ("El precio de su compra es de : $ " + precioTotal)
     console.log("El precio de su compra es de: $ " + precioTotal)
 }
@@ -90,11 +111,11 @@ function agregar(){
     }
 }
 
-function grande(precioGrande){
-    let opcion = prompt ("El tamaño grande pesa " + peso1 + " y cuesta " + precioGrande + "\n1 - Confirmar \n2 - Cancelar");
+function grande(Grande){
+    let opcion = prompt ("El tamaño grande pesa " + pesoGrande + " y cuesta $ " + Grande + "\n1 - Confirmar \n2 - Cancelar");
     switch(opcion){
         case "1":
-            confirmar(precioGrande);
+            confirmar(Grande);
             break;
         case "2":
             menu();
@@ -106,11 +127,11 @@ function grande(precioGrande){
     }
 }
 
-function chica(precioChica){
-    let opcion = prompt ("El tamaño chico pesa " + peso2 + " y cuesta " + precioChica + "\n1 - Confirmar \n2 - Cancelar");
+function chica(Chica){
+    let opcion = prompt ("El tamaño chico pesa " + pesoChica + " y cuesta $" + Chica + "\n1 - Confirmar \n2 - Cancelar");
     switch(opcion){
         case "1":
-            confirmar(precioChica);
+            confirmar(Chica);
             break;
         case "2":
             menu();
@@ -122,17 +143,17 @@ function chica(precioChica){
     }
 }
 
-function tamaño(){
-    let opcion = prompt("Que tamaño desea: \n1 - " + tamaño1 + "\n2 - " + tamaño2 + "\n3 - Cancelar");
+function tamaño(Grande, Chica){
+    let opcion = prompt("Que tamaño desea: \n1 - " + tamañoG + "\n2 - " + tamañoC + "\n3 - Cancelar");
     switch(opcion){
         case "1":
-            grande(precioGrande);
+            grande(Grande);
             break;
         case "2":
-            chica(precioChica);
+            chica(Chica);
             break;
         case "3":
-            cancelar();
+            listaProductos();
             break;
         default:
             alert("Opcion Incorrecta");
@@ -142,12 +163,15 @@ function tamaño(){
 }
 
 function menu (){
-    let opcion = prompt("Que desea hacer: \n1 - lista de productos \n2 - Salir");
+    let opcion = prompt("Que desea hacer: \n1 - Lista de productos \n2 - Buscar un producto \n3 - Salir");
     switch(opcion){
         case "1":
             listaProductos();
             break;
         case "2":
+            buscar();
+            break;
+        case "3":
             break;
         default:
             alert("Opcion Incorrecta");
