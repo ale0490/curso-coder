@@ -40,19 +40,30 @@ pasteleria.push(new Producto ("Cupcakes", 1200, 600 ))
 pasteleria.push(new Producto ("Muffins", 1200, 600 ))
 
 const contenedor = document.querySelectorAll(".boton");
-console.log(pasteleria)
+
 contenedor.forEach((torta) => {
     torta.innerHTML=`<h3> ${pasteleria[i].Nombre}</h3>
-                    <button class= "boton-agregar" onclick= "agregar();"> AGREGAR AL CARRITO </button>`;
+                    <button class= "boton-agregar" onclick= "agregar();" > AGREGAR AL CARRITO </button>`;
     i ++ ;
-    console.log(contenedor)
 });
 
+var clic = 0;
 function agregar(){
     document.getElementsByClassName(".boton-agregar")
-    document.getElementById("aasd").style.display = "block";
-    console.log("Agregado")
+    if(clic==0){
+        document.getElementById("aasd").style.display = "block";
+        clic = clic + 1; 
+        console.log("Hola!")
+    }
+    else{
+    document.getElementById("aasd").style.display = "none";      
+    clic = 0;
+    console.log("Chau!")
+    }
 }
+
+//Todavia no borre el codigo de abajo por si llego a usar alguna funcion
+
 
 // for (const tortas of pasteleria){
 //    contador++

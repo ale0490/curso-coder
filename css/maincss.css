@@ -107,6 +107,10 @@ section {
 
 .section {
   text-align: center; }
+  .section .asdd {
+    display: none;
+    font-size: 80px;
+    text-align: center; }
   .section .logo {
     height: 150px;
     width: 150px; }
@@ -157,8 +161,6 @@ section {
       background-color: #84552b;
       color: white;
       font-weight: bolder; }
-    .section .div-productos .asdd {
-      display: none; }
   .section .section-p {
     color: black;
     margin-bottom: 0;
