@@ -26,11 +26,6 @@ section {
 }
 .section {
     text-align: center;
-    .asdd{
-        display: none;
-        font-size: 80px;
-        text-align: center;
-    }
     .logo {
         height: 150px;
         width: 150px;
@@ -95,6 +90,11 @@ section {
             }
         }
         .boton {
+            .botones{
+                display:grid;
+                grid-template-columns: 100px 100px;
+                justify-content: space-around;
+            }
             .boton-agregar {
                 background-color: map-get($colores , secundario );
                 color: map-get($colores , texto2 );

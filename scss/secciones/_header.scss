@@ -13,6 +13,12 @@ header {
                 color: map-get($colores , principal );
             }
         }
+        button {
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
     }
 }
 .contenedor-nav {
@@ -34,6 +40,39 @@ header {
                 .navbar-brand {
                     font-size: 38px;
                 }
+                .btn {
+                    padding:0;
+                    background-color: map-get($colores , principal );
+                }
+            }
+        }
+    }
+    .collapse {
+        .card {
+            background-color: map-get($colores , header );
+            color: map-get($colores , principal);
+            font-size: 25px;
+            .lista-carrito {
+                text-align: center;
+                display: grid;
+                grid-template-columns: 350px 200px 100px 100px;
+                justify-content: space-between;
+                border: 1px solid map-get($colores , secundario);
+                .texto-carrito {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+                .imagen-carrito {
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+            .btn {
+                background-color: map-get($colores , secundario);
+                color: map-get($colores , principal);
+                border: 1.5px solid map-get($colores , secundario);
+                font-size: $texto;
+                margin: 20px;
             }
         }
     }

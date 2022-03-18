@@ -69,6 +69,9 @@ header {
       header ul a:hover {
         text-decoration: underline;
         color: #f7e4cb; }
+    header ul button img {
+      width: 35px;
+      height: 35px; }
 
 .contenedor-nav {
   background-color: #30271e;
@@ -85,6 +88,31 @@ header {
       background-color: #f7e4cb; }
     .contenedor-nav .navbar .container-fluid .navbar-collapse .navbar-brand {
       font-size: 38px; }
+    .contenedor-nav .navbar .container-fluid .navbar-collapse .btn {
+      padding: 0;
+      background-color: #f7e4cb; }
+  .contenedor-nav .collapse .card {
+    background-color: #30271e;
+    color: #f7e4cb;
+    font-size: 25px; }
+    .contenedor-nav .collapse .card .lista-carrito {
+      text-align: center;
+      display: grid;
+      grid-template-columns: 350px 200px 100px 100px;
+      justify-content: space-between;
+      border: 1px solid #84552b; }
+      .contenedor-nav .collapse .card .lista-carrito .texto-carrito {
+        padding-top: 20px;
+        padding-bottom: 20px; }
+      .contenedor-nav .collapse .card .lista-carrito .imagen-carrito {
+        height: 80px;
+        width: 80px; }
+    .contenedor-nav .collapse .card .btn {
+      background-color: #84552b;
+      color: #f7e4cb;
+      border: 1.5px solid #84552b;
+      font-size: 20px;
+      margin: 20px; }
 
 section {
   background-image: url(../imagenes/section.webp);
@@ -107,10 +135,6 @@ section {
 
 .section {
   text-align: center; }
-  .section .asdd {
-    display: none;
-    font-size: 80px;
-    text-align: center; }
   .section .logo {
     height: 150px;
     width: 150px; }
@@ -157,6 +181,10 @@ section {
           width: 300px;
           height: 300px;
           margin-bottom: 1rem; }
+    .section .div-productos .boton .botones {
+      display: grid;
+      grid-template-columns: 100px 100px;
+      justify-content: space-around; }
     .section .div-productos .boton .boton-agregar {
       background-color: #84552b;
       color: white;

@@ -21,10 +21,9 @@
 </head>
 
 <body>
-
-    <!-- HEADER -->
+<!-- HEADER -->
     <header>
-        <!-- NAV -->
+<!-- NAV -->
         <div class="contenedor-nav">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -47,13 +46,28 @@
                         <ul>
                             <a class="navbar-brand link" href="contacto.html">Contacto</a>
                         </ul>
+                        <ul>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                <img src="../../../../carrito-de-compras.png" alt="">
+                            </button>
+                        </ul>
                     </div>
                 </div>
             </nav>
+<!-- CARRITO -->
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <ul id="carrito"></ul>
+                    <div>
+                        <p class="text-right">Total: <span id="total"></span></p>
+                        <button id="boton-vaciar" class="btn">Vaciar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- SECTION -->
+<!-- SECTION -->
     <section class="section">
         <div class="h1">
             <h1>LO ARTESANAL SIEMPRE ES MAS RICO</h1>
@@ -125,7 +139,6 @@
                 <div class="boton"></div>
             </div>
         </div>
-        <p class="asdd" id="aasd">HOLA PABLO!</p>
         <div class="div-productos">
             <div>
                 <div class="contenedor" data-bs-toggle="modal" data-bs-target="#torta-frutilla">
@@ -455,12 +468,11 @@
         </div>
         <p class="section-p">Todos nuestros productos son elaboracion 100% artesanal</p>
     </section>
-    
-    <!-- FOOTER -->
+<!-- FOOTER -->
     <footer>
         <div class="footer">
             <div class="redes navegacion">
-                <!-- MAPA -->
+<!-- MAPA NAVEGACION -->
                 <h4>NAVEGACION</h4>
                 <ul>
                     <a class="link" href="../index.html">Inicio</a>
@@ -478,7 +490,7 @@
                     <a class="link" href="contacto.html"> Contacto</a>
                 </ul>
             </div>
-            <!-- PAGOS -->
+<!-- PAGOS -->
             <div class="redes pago">
                 <h4>MEDIOS DE PAGO</h4>
                 <div>
@@ -501,7 +513,7 @@
                     <img class="imagen-pagos" src="../imagenes/pagos/rapipago.png">
                 </div>
             </div>
-            <!-- REDES -->
+<!-- REDES -->
             <div class="news">
                 <div class="redes">
                     <h4>SEGUINOS EN</h4>
@@ -510,7 +522,7 @@
                         <img class="imagen-redes" src="../imagenes/contacto/facebook.png" alt="facebook">
                     </div>
                 </div>
-                <!-- FORM -->
+<!-- FORM NEWSLETTER -->
                 <div class="box-newsletter">
                     <div class="newsletter">
                         <h4>NEWSLETTER</h4>
@@ -528,15 +540,13 @@
                 </div>
             </div>
         </div>
-        <!-- COPYRIGHT -->
         <div class="sitio">
             <p class="copy"> Copyright © 2021 Las Tortas de Brenda - Todos los derechos reservados. Desarrollado por Alejandro Ibañez</p>
         </div>
-    </footer>    
-
+    </footer>   
+    
+<!-- SCRIPTS -->
+    <script src="../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-<script src="../scrip.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 </html>
