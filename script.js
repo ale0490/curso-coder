@@ -70,11 +70,11 @@ function crearBoton() {
 function agregarAlCarrito(e) {
     carritoCompras.push(e.target.getAttribute('id'))
     actualizarCarrito();
+    alertaToastify();
     guardarCarritoEnLocalStorage();
 }
 
 function actualizarCarrito() {
-    //
     carrito.textContent = '';
     const carritoSinDuplicados = [...new Set(carritoCompras)];
 
@@ -108,23 +108,48 @@ function actualizarCarrito() {
     });
     calcularTotal();
 }
-
+function alertaToastify() {
+    Toastify({
+        text: "Agregado al carrito",
+        duration: 1500,
+        close: true,
+        gravity: "bottom",
+        position: "right",
+        style: {
+          background: "#f7e4cb",
+          color: "#000000",
+          border: "1.5px solid #84552b"
+        },
+      }).showToast();
+}
 
 function borrarItemCarrito(e) {
-    // Obtenemos el producto ID que hay en el boton pulsado
-    const id = e.target.dataset.item;
-    // Borramos todos los productos
-    carritoCompras = carritoCompras.filter((carritoId) => {
+    Swal.fire({
+        title: '¿Eliminar del carrito?',
+        text: "¿Esta seguro que desea eliminar este producto?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'ELIMINAR'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+            'Eliminado',
+            'El producto ha sido borrado',
+            'success'
+            )
+        const id = e.target.dataset.item;
+        carritoCompras = carritoCompras.filter((carritoId) => {
         return carritoId !== id;
+        });
+        }
     });
-    // volvemos a renderizar
     actualizarCarrito();
-    // Actualizamos el LocalStorage
     guardarCarritoEnLocalStorage();
 }
 
 function calcularTotal() {
-    [1,1,1,3,4]
     return carritoCompras.reduce((Total, item) => {
         const miItem = pasteleria.filter((product) => {
             return product.id === parseInt(item);
@@ -137,9 +162,7 @@ function guardarCarritoEnLocalStorage () {
 }
 
 function cargarCarritoDeLocalStorage () {
-    // ¿Existe un carrito previo guardado en LocalStorage?
     if (localStorage.getItem('carrito') !== null) {
-        // Carga la información
         carritoCompras = JSON.parse(localStorage.getItem('carrito'));
     }
 }
