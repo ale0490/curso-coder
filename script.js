@@ -4,9 +4,27 @@ const carrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
 const BotonVaciarCarrito = document.querySelector('#boton-vaciar');
 const localStorage = window.localStorage;
+let pasteleria = [];
+
+fetch("../data.json")
+	.then(r => r.json())
+	.then(info => {
+		info.forEach(item =>
+			pasteleria.push(
+				new Producto(
+					item.id,
+					item.nombre,
+					item.precioGrande,
+					item.precioChica,
+					item.imagen,
+				)
+			)
+		);     
+        crearBoton();
+	});
 
 class Producto {
-    constructor (id, nombre, precioGrande, precioChica, imagen){
+    constructor(id, nombre, precioGrande, precioChica, imagen) {
         this.id = id;
         this.Nombre = nombre;
         this.Grande = precioGrande;
@@ -14,28 +32,6 @@ class Producto {
         this.img = imagen;
     }
 }
-
-const producto1 = new Producto(01, "Torta Matilda", 2500, 1500, "../imagenes/tortas/torta-portada.webp");
-const producto2 = new Producto(02, "Torta Oreo", 2000, 1200, "../imagenes/tortas/torta-oreo.webp");
-const producto3 = new Producto(03, "Torta Flan", 2250, 1350, "../imagenes/tortas/torta.webp");
-const producto4 = new Producto(04, "Torta de Frutillas", 2050, 1300, "../imagenes/tortas/frutilla.webp");
-const producto5 = new Producto(05, "Torta Marquise de Frutos Rojos", 2300, 1300, "../imagenes/tortas/marquise.webp");
-const producto6 = new Producto(06, "Torta Selva Negra", 2400, 1250, "../imagenes/tortas/tarta-selva-negra.webp");
-
-const pasteleria = [producto1, producto2, producto3, producto4, producto5, producto6];
-
-pasteleria.push(new Producto (07, "Alfajores de Maicena", 1200, 600, "../imagenes/alfajores/alfajor.webp"))
-pasteleria.push(new Producto (08, "Alfajores Clasicos", 1200, 600, "../imagenes/alfajores/alfajor2.webp"))
-pasteleria.push(new Producto (09, "Alfajores Santafecinos", 1200, 600, "../imagenes/alfajores/ojaldre.webp"))
-pasteleria.push(new Producto (10, "Macarons", 1200, 600, "../imagenes/alfajores/macarons.webp"))
-pasteleria.push(new Producto (11, "Conitos de Dulce de Leche", 1200, 600, "../imagenes/alfajores/conitos.webp"))
-pasteleria.push(new Producto (12, "Tabletas de chocolate", 1200, 600, "../imagenes/alfajores/tableta.webp"))
-pasteleria.push(new Producto (13, "Crumble de manzana", 1200, 600, "../imagenes/tortas/torta-manzana.webp"))
-pasteleria.push(new Producto (14, "Pastafrola", 1200, 600, "../imagenes/tortas/pastafrola-batata.webp"))
-pasteleria.push(new Producto (15, "Tarta Toffee", 1200, 600, "../imagenes/tortas/torta-tofy.webp"))
-pasteleria.push(new Producto (16, "Tarta de Ricota", 1200, 600, "../imagenes/tortas/ricota.webp"))
-pasteleria.push(new Producto (17, "Cupcakes", 1200, 600, "../imagenes/tortas/cupcakes.webp"))
-pasteleria.push(new Producto (18, "Muffins", 1200, 600, "../imagenes/tortas/muffin.webp"))
 
 function crearBoton() {
     pasteleria.forEach((info) => {    
@@ -75,9 +71,10 @@ function agregarAlCarrito(e) {
 }
 
 function actualizarCarrito() {
+
     carrito.textContent = '';
     const carritoSinDuplicados = [...new Set(carritoCompras)];
-
+    
     carritoSinDuplicados.forEach((item) => {
         // busqueda del producto
         const miItem = pasteleria.filter((torta) => {
@@ -88,7 +85,6 @@ function actualizarCarrito() {
             // cohincide la ID? sumar+1, sino se mantiene.
             return propiedadId === item ? total += 1 : total;
         }, 0);
-
         //creacion del item en el carrito.
         const li = document.createElement('li');
         li.classList.add('lista-carrito'); 
@@ -96,7 +92,7 @@ function actualizarCarrito() {
                         <div><img class= "imagen-carrito mx-5" src="${miItem[0].img}"/></div>
                         <div class= "texto-carrito">${miItem[0].Grande}`+ ` $</div>`;
 
-        // eliminar producto
+        // crea boton eliminar
         const eliminar = document.createElement('button');
         eliminar.classList.add('btn');
         eliminar.textContent = 'X';
@@ -143,9 +139,9 @@ function borrarItemCarrito(e) {
         carritoCompras = carritoCompras.filter((carritoId) => {
         return carritoId !== id;
         });
+        actualizarCarrito();
         }
     });
-    actualizarCarrito();
     guardarCarritoEnLocalStorage();
 }
 
@@ -175,6 +171,4 @@ function vaciarCarrito() {
 BotonVaciarCarrito.addEventListener('click', vaciarCarrito);
 
 cargarCarritoDeLocalStorage();
-crearBoton();
-actualizarCarrito();
-
+//actualizarCarrito();

@@ -1,0 +1,110 @@
+[{
+    "id":"1",
+    "nombre":"Torta Matilda",
+    "precioGrande":"2500",
+    "precioChica":"1500",
+    "imagen":"../imagenes/tortas/torta-portada.webp"
+},
+{   "id":"2",
+    "nombre":"Torta Oreo",
+    "precioGrande":"2000",
+    "precioChica":"1200",
+    "imagen":"../imagenes/tortas/torta-oreo.webp"
+},
+{   "id":"3",
+    "nombre":"Torta Flan",
+    "precioGrande":"2250",
+    "precioChica":"1350",
+    "imagen":"../imagenes/tortas/torta.webp"
+},
+{   "id":"4",
+    "nombre":"Torta de Frutillas",
+    "precioGrande":"2050",
+    "precioChica":"1300",
+    "imagen":"../imagenes/tortas/frutilla.webp"
+},
+{   "id":"5",
+    "nombre":"Torta Marquise de Frutos Rojos",
+    "precioGrande":"2300",
+    "precioChica":"1300",
+    "imagen":"../imagenes/tortas/marquise.webp"
+},
+{   "id":"6",
+    "nombre":"Torta Selva Negra",
+    "precioGrande":"2400",
+    "precioChica":"1250",
+    "imagen":"../imagenes/tortas/tarta-selva-negra.webp"
+},
+{   "id":"7",
+    "nombre":"Alfajores de Maicena",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/alfajores/alfajor.webp"
+},
+{   "id":"8",
+    "nombre":"Alfajores Clasicos",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/alfajores/alfajor2.webp"
+},
+{   "id":"9",
+    "nombre":"Alfajores Santafecinos",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/alfajores/ojaldre.webp"
+},
+{   "id":"10",
+    "nombre":"Macarons",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/alfajores/macarons.webp"
+},
+{   "id":"11",
+    "nombre":"Conitos de Dulce de Leche",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/alfajores/conitos.webp"
+},
+{   "id":"12",
+    "nombre":"Tabletas de chocolate",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/alfajores/tableta.webp"
+},
+{   "id":"13",
+    "nombre":"Crumble de manzana",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/tortas/torta-manzana.webp"
+},
+{   "id":"14",
+    "nombre":"Pastafrola",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/tortas/pastafrola-batata.webp"
+},
+{   "id":"15",
+    "nombre":"Tarta Toffee",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/tortas/torta-tofy.webp"
+},
+{   "id":"16",
+    "nombre":"Tarta de Ricota",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/tortas/ricota.webp"
+},
+{   "id":"17",
+    "nombre":"Cupcakes",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/tortas/cupcakes.webp"
+},
+{   "id":"18",
+    "nombre":"Muffins",
+    "precioGrande":"1200",
+    "precioChica":"600",
+    "imagen":"../imagenes/tortas/muffin.webp"
+}
+]
